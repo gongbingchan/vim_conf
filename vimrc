@@ -15,13 +15,12 @@ source ~/.vim/config/denite.vimrc
 source ~/.vim/config/neocomplete.vimrc
 source ~/.vim/config/shortcut.vimrc
 
-" Vim configuration.
+" FileType settings.
 autocmd FileType help setlocal number           " Make the help doc shown with line number.
 
-" Settings.
+" Common Settings.
 syntax on
 colorscheme grb256
-
 set t_Co=256
 set background=dark
 set mouse=v                                    " Support select by mouse, use option/alt key to jump.
