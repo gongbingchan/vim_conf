@@ -3,10 +3,12 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
     Plugin 'VundleVim/Vundle.vim'
-    Plugin 'Shougo/denite.nvim'                 " file, buffer, line management plugin.
-    Plugin 'Shougo/neomru.vim'                  " most recent use file.
-    Plugin 'Shougo/neocomplete.vim'             " auto complete.
-    Plugin 'davidhalter/jedi-vim'               " python auto complete, used by neocomplete.
+    Plugin 'Shougo/denite.nvim'                 " File, buffer, line management plugin.
+    Plugin 'Shougo/neomru.vim'                  " Most recent use file.
+    Plugin 'Shougo/neocomplete.vim'             " Auto complete.
+    Plugin 'davidhalter/jedi-vim'               " Python auto complete, used by neocomplete.
+    Plugin 'thinca/vim-quickrun'                " Run program in vim.
+    Plugin 'Chiel92/vim-autoformat.git'         " auto format.
 call vundle#end()
 filetype plugin indent on
 
@@ -14,16 +16,17 @@ filetype plugin indent on
 source ~/.vim/config/denite.vimrc
 source ~/.vim/config/neocomplete.vimrc
 source ~/.vim/config/shortcut.vimrc
+source ~/.vim/config/quickrun.vimrc
 
 " FileType settings.
 autocmd FileType help setlocal number           " Make the help doc shown with line number.
 
 " Common Settings.
 syntax on
-colorscheme grb256
+colorscheme atom-dark-256
 set t_Co=256
 set background=dark
-set mouse=v                                    " Support select by mouse, use option/alt key to jump.
+set mouse=v                                     " Support select by mouse, use option/alt key to jump.
 set guifont=Monaco:h14
 set fenc=utf-8
 set relativenumber
